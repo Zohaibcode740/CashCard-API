@@ -104,6 +104,15 @@ The project is secured using **Spring Security** with Basic Authentication. Only
 3. If authentication is successful, the request is processed.
 4. If authentication fails, a `401 Unauthorized` response is returned.
 
+## Security notes
+
+**Learning project only:** The authentication setup and in-memory users included in this project are intended for learning and tutorial purposes only. The default users and credentials should not be treated as production-ready security configuration.
+
+- The in-memory users and their default values are provided only for this learning project. They should not be reused as-is in a production application.
+- For deployments, override the `CASHCARD_USERS_*` configuration values instead of relying on the tutorial defaults.
+- The H2 console should only be enabled for local development or testing. It should not be enabled or exposed in a production environment.
+- Production applications should use a real identity/user store and an appropriate CSRF and security configuration. Do not copy the tutorial security setup directly into a production application without reviewing and adapting it for the application's security requirements.
+
 ## Testing with JUnit and Testcontainers
 The project includes integration tests using JUnit and Testcontainers to validate API functionality. Tests ensure that all CRUD operations work correctly.
 
